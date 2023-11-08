@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.ui.Model;
 
 @Controller
-@RequestMapping("/api/public")
+@RequestMapping("/api/public/ccavenue")
 public class CcAvenueController {
 
     @GetMapping("/hello")
