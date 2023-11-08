@@ -11,12 +11,14 @@ public class CcAvenueController {
 
     @GetMapping("/hello")
     public String hello(Model model) {
+        System.out.println("/hello called!!!!!");
         model.addAttribute("name");
         return "hello";
     }
 
     @GetMapping("/responseHandler")
     public String responseHandler( Model model) {
+        System.out.println("/responseHandler called!!!!!");
         model.addAttribute("name");
         return "ccavResponseHandler";
     }
