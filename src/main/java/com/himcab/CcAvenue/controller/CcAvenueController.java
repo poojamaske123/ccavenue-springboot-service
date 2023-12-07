@@ -23,13 +23,6 @@ public class CcAvenueController {
         return "ccavResponseHandler";
     }
 
-    @GetMapping("/handler")
-    public String handler( Model model) {
-        System.out.println("/Handler called!!!!!");
-        model.addAttribute("name");
-        return "ResponseHandler";
-    }
-
     @GetMapping("/getRSA")
     public String getRSA( Model model) {
         System.out.println("/getRSA called!!!!!");
