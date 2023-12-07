@@ -8,8 +8,8 @@
 <%@page import="java.net.URL"%>
 <%@page import="java.util.Enumeration"%>
 <%
-    ProductionUrl=https://secure.ccavenue.com/transaction/getRSAKey
-    TestUrl=https://test.ccavenue.com/transaction/getRSAKey
+    String productionUrl = "https://secure.ccavenue.com/transaction/getRSAKey";
+    String testUrl = "https://test.ccavenue.com/transaction/getRSAKey";
 
     StringBuffer vRequest = new StringBuffer("");
     Enumeration vReqParam = request.getParameterNames();
@@ -23,7 +23,7 @@
     DataInputStream vInput = null;
     StringBuffer vStringBuffer = null;
     try {
-        vUrl = new URL(TestUrl);
+        vUrl = new URL(productionUrl);
         if (vUrl.openConnection() instanceof HttpsURLConnection) {
             vHttpUrlConnection = (HttpsURLConnection) vUrl.openConnection();
         } else {
